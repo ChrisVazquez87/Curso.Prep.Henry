@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 const {
-  nuevaString,
-  nuevoNum,
-  nuevoBool,
-  nuevaResta,
+  nueva'Chris',
+  nuevo'87',
+  nuevo'true',
+  nueva'10 - 5 ==5',
   nuevaMultiplicacion,
   nuevoModulo,
   devolverString,
