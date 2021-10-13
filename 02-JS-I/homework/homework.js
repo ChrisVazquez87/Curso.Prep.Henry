@@ -275,4 +275,4 @@ module.exports = {
   esVocal,
 };
 
-$ npm test JSI.test.js pararse siempre sobre la carpeta homework
+npm test JSI.test.js pararse siempre sobre la carpeta homework
