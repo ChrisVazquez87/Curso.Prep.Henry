@@ -69,11 +69,13 @@ function sonIguales(x, y) {
   
 }
 
+
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  return str1.length === str2.length;
+  if (str1.length === str2.length) return true
+    return false
   
 }
 
@@ -89,8 +91,8 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num > 50;
-  
+  if (num > 50) return true
+  return false
 }
 
 function obtenerResto(x, y) {
@@ -120,6 +122,7 @@ function elevarAlCuadrado(num) {
   // Tu código:
   return Math.pow(num, 2); 
 }
+  // return num ** 2 esta es otra opción
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
@@ -136,9 +139,6 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  var resto = num % 1;
-  var entero = num - resto;
-  if (resto >= 0.5) {return entero + 1;} else {return entero;}
   return Math.round(num);
 }
 
@@ -230,7 +230,7 @@ function esVocal(letra){
   if (letra.length > 1){return "Dato incorrecto"}
     if(letra === "a" || letra === "e" || letra "i" ||letra === "o" || letra === "u"){return
       "es vocal"}
-      return "Dato incorrecto"
+    return "Dato incorrecto"
       
 }
 
@@ -274,3 +274,5 @@ module.exports = {
   deEuroAdolar,
   esVocal,
 };
+
+$ npm test JSI.test.js pararse siempre sobre la carpeta homework
