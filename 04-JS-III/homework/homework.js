@@ -28,7 +28,8 @@ function incrementarPorUno(array) {
   // Tu código:
   var nuevoArray = [];
   for (var i = 0; i < array.length; i++) {
-    nuevoArray[i] = array[i] + 1;
+    var numero = array[i]
+    nuevoArray.push(numero + 1);
   }
   return nuevoArray;
 }
@@ -38,7 +39,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array[array.length] = elemento;
+  // array[array.length] = elemento;
+    array.push(elemento)
   return array;
 }
 
@@ -129,7 +131,7 @@ function cuentoElementos(arreglo){
   //Escribe tu código aquí
   let contador = 0;
   for (let i = 0; i < arreglo.length; i++) {
-    if(arreglo[i] > 19) {
+    if(arreglo[i] > 18) {
       contador++
     }
   }
@@ -190,9 +192,8 @@ function mesesDelAño(array) {
   if(nuevoArray.length < 3) {
     return "No se encontraron los meses pedidos";
   }
-  else {
     return nuevoArray;
-  }
+  
 }
 
 
