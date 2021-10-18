@@ -6,14 +6,14 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  var obj = {
+  var gato = {
     nombre: nombre,
     edad: edad,
     meow: function() {
       return 'Meow!';
     }
   };
-  return obj;
+  return gato;
 }
 
 
@@ -38,10 +38,12 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
+  // objetoMisterioso = {
+  // numeroMisterioso: ? * 5
+  // }
   var result = objetoMisterioso.numeroMisterioso * 5;
      return result;
-  }
-
+  
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -58,24 +60,24 @@ function nuevoUsuario(nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-  var obj = {
+  var newUser = {
     nombre: nombre,
     email: email,
     password: password
   };
    
-   return obj;
+   return newUser;
 }
 
 function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if(usuario['email']){
+  if(usuario.email){
     return true;
-  } else {
-    return false;
   }
+    return false;
+
 }
 
 
@@ -85,6 +87,7 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+  // return objeto.hasOwnProperty
   if(objeto[propiedad]) {
     return true;
   } else {
@@ -99,8 +102,10 @@ function verificarPassword(usuario, password) {
   // De lo contrario, devuelve "false"
   // // Tu código:
 
-  return usuario['password'] === pasword;
+  if (usuario.password === password);
+   return true;
 }
+   return false;
 
 function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
@@ -170,9 +175,10 @@ function agregarMetodoCalculoDescuento(producto) {
   //   porcentajeDeDescuento: 5,
   //   calcularPrecioDescuento:
   //  };
+   
   producto.calcularPrecioDescuento = fucntion() {
     return this.precio - (this.precio * this.porcentajeDeDescuento);
-
+     
   };
   return producto;
 }
