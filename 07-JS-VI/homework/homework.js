@@ -35,8 +35,8 @@ function sumarArray(numeros, cb) {
   // cb(suma);
 
   // Segunda opcion
-  var sumaTotal = numeros.reduce(function(acc, curr) {
-    return acc + curr;
+  var sumaTotal = numeros.reduce(function(acc, el) {
+    return acc + el;
   },0);
   cb(sumaTotal);
 }
@@ -52,23 +52,27 @@ function forEach(array, cb) {
     cb(array[i]);
   }
 }
+// 2da opcionn: array.forEach(function(elemento){
+// cb(elemento)
+// })
+
 
 function map(array, cb) {
   // Crea un nuevo array
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
-  // var array = [1,2,3,4,5]
-  // fuction cb (e) {console.log(e)}
-  // nuevoarray = []
+  // 1era opcion:
   // var nuevoArray = [];
   //for(var i = 0; i < array.length; i++) {
-  //   nuevoArray.push(cb(array[i]));
-  //   nuevoArray[i] = cb(array[i]);
+  // var res = cb(array[i])
+  //   nuevoArray.push(res)
+  // }
+  // return nuevoArray
   // }
   //Tu código:
   var nuevoArray = array.map(function(el) {
     return cb(el);
-  });
+  })
   return nuevoArray;
 }
 
@@ -77,13 +81,21 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   var nuevoArray = [];
-  for(let i = 0; i < array.length; i++) {
-    if(array[i][0] === "a") {
+  for(var i = 0; i < array.length; i++) {
+    if(array[i].charAt(0) === 'a') {
       nuevoArray.push(array[i])
     }
   }
   return nuevoArray;
 }
+
+//2da opcion:
+// var nuevoArray = array.filter(function(elemento){
+// return elemento[0] === 'a'
+// })
+// rerturn nuevoArray
+// }
+
 
 // No modificar nada debajo de esta línea
 // --------------------------------
